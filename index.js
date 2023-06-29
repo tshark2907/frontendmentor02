@@ -10,14 +10,16 @@ formulario.addEventListener('submit', (event) =>{
     event.preventDefault();
     const email = document.querySelector('input[type="email"]').value;
     exibirEmail.innerHTML = email;
-    if (!entrada.checkValidity()) {
-        entrada.classList.add('invalid');
-    } else {
-        entrada.classList.remove('invalid');
-        popupFundo.style.display = 'block';
-        popupCorpo.style.display = 'block';
-}})
 
+    if(entrada.value !== ''){
+        if (!entrada.checkValidity()) {
+            entrada.classList.add('invalid');
+        } else {
+            entrada.classList.remove('invalid');
+            popupFundo.style.display = 'block';
+            popupCorpo.style.display = 'block';
+    }}})
+        
 fecharPopup.addEventListener('click', () => {
     popupFundo.style.display = 'none';
     popupCorpo.style.display = 'none';
