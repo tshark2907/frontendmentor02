@@ -51,8 +51,60 @@ h1{
 img{
     width: 505px;
 }
-.wrapper_confirmation{
+.popup_background{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgb(19, 19, 97);
     display: none;
+}
+.wrapper_confirmation{
+   width: 300px;
+   max-width: 80%;
+   height: 300px;
+   background-color: white;
+   border-radius: 15px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   position: fixed;
+   z-index: 2;
+}
+.wrapper_confirmation h1{
+    position: absolute;
+    text-align: center;
+    left: 10%;
+    top: 10%;
+    color: rgb(19, 19, 97);
+}
+#popup_text{
+    color: rgb(19, 19, 97);
+    font-size: 0.9rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    max-width: 280px;
+    white-space: normal;
+    display: inline-block;
+    text-align: center;
+}
+#close_popup{
+    width: 80%;
+    background-color: lightseagreen;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+}
+#close_popup:hover{
+color: white;
+box-shadow: 1px 2px 20px -5px lightseagreen;
+-webkit-box-shadow: 1px 2px 20px -5px lightseagreen;
+-moz-box-shadow: 1px 2px 42px -5px lightseagreen;
 }
 form{
     position: absolute;
@@ -72,6 +124,14 @@ form{
 #email_input::placeholder{
     padding-left: 10px;
 }
+input[type="email"]:invalid {
+    border: 1px solid red;
+  }
+input[type="email"]:invalid + span::after {
+    content: "Email inválido";
+    color: red;
+    display: block;
+ }
 button{
     height: 50px;
     width: 100%;
@@ -89,6 +149,8 @@ button:hover{
 .attribution{
     position: absolute;
     bottom: -50px;
+    font-size: 11px; text-align: center; 
+    color: hsl(228, 45%, 44%);
 }
 @media(max-width:500px){
 
