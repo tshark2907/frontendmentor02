@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    background-color: rgb(19, 19, 97);
+}
+.main_wrapper{
+    background-color: white;
+    margin: 5% auto;
+    width: 1000px;
+    height: 700px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items:center;
+    border-radius: 30px;
+}
+.wrapper{
+    width:360px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrapper_title{
+    position: absolute;
+    top: 0%;
+}
+h1{
+    margin-bottom: 15px;
+}
+#check{
+    background-color: orange;
+    border-radius: 50%;
+    color: white;
+}
+.check_aligner{
+    margin-top: 50px;
+    height: 15px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+}
+.wrapper_content{
+    position: absolute;
+    top: 20%;
+}
+img{
+    width: 505px;
+}
+.wrapper_confirmation{
+    display: none;
+}
+form{
+    position: absolute;
+    bottom:0px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+#email_input{
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#email_input::placeholder{
+    padding-left: 10px;
+}
+button{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(81, 81, 222);
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+button:hover{
+    transform: scale(1.02);
+    border: 1px solid rgb(81, 81, 222);
+    background-color: white;
+    color: rgb(81, 81, 222);
+}
+.attribution{
+    position: absolute;
+    bottom: -50px;
+}
+@media(max-width:500px){
+
+.main_wrapper{
+    margin: -25% auto 0 auto;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+img{
+    transform: scale(0.7);
+    margin-top: -80%;
+}
+.wrapper{
+    width: 100%;
+}
+.wrapper_title{
+   margin-top: -20px;
+   margin-left: 10px;
+   width: 90%;
+   text-align: justify;
+}
+.wrapper_content{
+    top: 10%;
+    width: 90%;
+}
+.check_aligner{
+    margin-top: 50px;
+    margin-left: 10px;
+}
+form{
+    bottom: 55px;
+    width: 95%;
+    margin-left: 10px;
+    gap: 10px;
+};
+}
